@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Greeter from './artifacts/contracts/Greeter.sol/Greeter.json'
+
+console.log("GREETER ABI: ", Greeter.abi)
+
 function App() {
   return (
     <div className="App">
