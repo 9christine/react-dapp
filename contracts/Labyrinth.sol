@@ -56,7 +56,7 @@ contract LabyrinthNFT is ERC721URIStorage {
         "Prayer"
     ];
 
-    event NewEpicNFTMinted(address sender, uint256 tokenId);
+    event NewLabyrinthNFTMinted(address sender, uint256 tokenId);
 
     constructor() ERC721("LabyrinthNFT", "CRETE") {
         console.log("Labyrinth contract: Tese!");
@@ -159,6 +159,7 @@ contract LabyrinthNFT is ERC721URIStorage {
 
         // Increment the counter for when the next NFT is minted.
         _tokenIds.increment();
+
+        emit NewLabyrinthNFTMinted(msg.sender, newItemId);
     }
 }
-
