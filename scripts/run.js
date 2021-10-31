@@ -8,13 +8,12 @@ const main = async () => {
   let txn = await nftContract.makeLabyrinthNFT()
   // Wait for it to be mined.
   await txn.wait()
-  console.log("Minted NFT.")
+  console.log("Minted NFT #1.")
 
   txn = await nftContract.makeLabyrinthNFT()
   // Wait for it to be mined.
   await txn.wait()
   console.log("Minted NFT #2")
-
 };
 
 const runMain = async () => {

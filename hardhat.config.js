@@ -16,7 +16,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
- module.exports = {
+module.exports = {
   solidity: "0.8.4",
   paths: {
     artifacts: './src/artifacts',
@@ -28,6 +28,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     ropsten: {
       url: "https://ropsten.infura.io/v3/c891f6241df5413fae4fa319509600f7",
       accounts: [`0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80`]
-    }
+    },
+    rinkeby: {
+      url: 'https://eth-rinkeby.alchemyapi.io/v2/yfaiVu1kjvylU36adWe0YysYZw-YEWzX',
+      accounts: ['41b9e1823677b12ecd641ff3de6254e22b3b02e8241114af1b3b7dc22cd293ce'],
+    },
   }
 };
