@@ -1,19 +1,14 @@
 const main = async () => {
-  const nftContractFactory = await hre.ethers.getContractFactory('LabyrinthNFT');
+  const nftContractFactory = await hre.ethers.getContractFactory('9agonNFT');
   const nftContract = await nftContractFactory.deploy();
   await nftContract.deployed();
   console.log("Contract deployed to ", nftContract.address);
 
   // Call the function.
-  let txn = await nftContract.makeLabyrinthNFT()
+  let txn = await nftContract.make9agonNFT()
   // Wait for it to be mined.
   await txn.wait()
   console.log("Minted NFT #1.")
-
-  txn = await nftContract.makeLabyrinthNFT()
-  // Wait for it to be mined.
-  await txn.wait()
-  console.log("Minted NFT #2")
 };
 
 const runMain = async () => {
