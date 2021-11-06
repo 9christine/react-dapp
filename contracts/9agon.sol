@@ -14,19 +14,19 @@ contract NonagonNFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    event New9agonNFTMinted(address sender, uint256 tokenId);
+    event NewNonagonNFTMinted(address sender, uint256 tokenId);
 
-    constructor() ERC721("9NewtAndCalista", "9AGON") {
-        console.log("9agon contract: Alive!");
+    constructor() ERC721("9NewtAndCalista", "NONAGON") {
+        console.log("Nonagon contract: Alive!");
     }
 
-    function make9agonNFT() public {
+    function makeNonagonNFT() public {
         uint256 newItemId = _tokenIds.current();
 
         // Actually mint the NFT to the sender using msg.sender.
         _safeMint(msg.sender, newItemId);
 
-        _setTokenURI(newItemId, "blah");
+        _setTokenURI(newItemId, "https://jsonkeeper.com/b/EFX1");
 
         _tokenIds.increment();
 
