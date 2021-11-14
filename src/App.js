@@ -112,6 +112,7 @@ const App = () => {
 
   useEffect(() => {
     checkIfWalletIsConnected();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const renderNotConnectedContainer = () => (
@@ -145,7 +146,7 @@ const App = () => {
             className="footer-text"
             href={TWITTER_LINK}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >{`built on @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
